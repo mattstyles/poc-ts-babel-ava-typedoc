@@ -5,15 +5,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "standard src/**/*.ts",
     "test": "ava --verbose",
     "build": "babel src --out-dir lib --extensions \".ts,.tsx\"",
     "build:types": "tsc --emitDeclarationOnly",
     "build:docs": "typedoc src --out docs",
+    "prestart": "npm run build",
     "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "starter",
+    "poc",
+    "typescript",
+    "babel",
+    "types",
+    "ava",
+    "typedoc"
+  ],
+  "author": "Matt Styles <matt@personalurban.com",
+  "license": "MIT",
   "eslintConfig": {
     "rules": {
       "no-unused-vars": "off",
